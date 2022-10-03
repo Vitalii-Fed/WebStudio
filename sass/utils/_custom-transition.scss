@@ -1,0 +1,21 @@
+@use 'sass:list';
+
+@mixin customTransition($property...) {
+  $propertyList: ();
+  $duration: 250ms;
+  $timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+  // $delay: 0;
+
+  @each $element in ($property) {
+    $propertyList: list.append($propertyList, #{$element}, $separator: comma);
+  }
+
+  transition-property: $propertyList;
+  transition-duration: $duration;
+  transition-timing-function: $timingFunction;
+  // transition-delay: $delay;
+}
+
+// .my-form__btn {
+//   @include customTransition(color, bgcolor);
+// }
