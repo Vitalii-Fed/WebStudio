@@ -1,0 +1,121 @@
+%btn {
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+%btn-site-theme {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: $color-text-secondary;
+    background-color: $color-site-accent;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+    @include customTransition(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+}
+
+.hero__btn,
+.form__btn,
+.modal-form__btn-submit {
+    @extend %btn;
+    @extend %btn-site-theme;
+
+    width: 200px;
+    height: 50px;
+}
+
+.hero__btn {
+    @media screen and (min-width: 1200px) {
+        width: 216px;
+    }
+}
+
+.form__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--icon {
+        margin-left: 10px;
+        fill: currentColor;
+    }
+}
+
+.filter-list__btn {
+    @extend %btn;
+
+    padding: 6px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: $color-text-title;
+    background-color: $color-bg-secondary;
+
+    @include customTransition(color, background-color, box-shadow);
+    
+    &:hover,
+    &:focus {
+        color: $color-text-secondary;
+        background-color: $color-site-accent;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.08),
+        0 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.modal__btn-close {
+    @extend %btn;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    color: $color-site-dark;
+    background-color: $color-bg-primary;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include customTransition(color);
+
+    &:hover,
+    &:focus {
+        color: $color-site-accent;
+    }
+
+    &--icon {
+        fill: currentColor;
+    }
+}
+
+//========================================
+.menu__btn {
+    @extend %btn;
+
+    width: 40px;
+    height: 40px;
+
+    color: $color-site-dark;
+    background-color: $color-bg-primary;
+
+    &:hover,
+    &focus {
+        fill: $color-site-accent;
+    }
+
+    &--icon {
+        fill: currentColor;
+    }
+}
