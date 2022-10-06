@@ -127,14 +127,27 @@
         padding-bottom: 25px;
     }
 
+    .logo {
+        font-size: 26px;
+        line-height: 1.16;
+    }
+
     .nav {
         display: flex;
         justify-content: flex-start;
         margin-left: 93px;
+
+        &__link {
+            font-size: 14px;
+        }
     }
 
     .contacts {
         flex-direction: row;
         gap: 30px;
+
+        &__link {
+            font-size: 14px;
+        }
     }
 }

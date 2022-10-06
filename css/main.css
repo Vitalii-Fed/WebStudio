@@ -203,6 +203,10 @@ a {
     padding-top: 24px;
     padding-bottom: 25px;
   }
+  .logo {
+    font-size: 26px;
+    line-height: 1.16;
+  }
   .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -212,11 +216,17 @@ a {
             justify-content: flex-start;
     margin-left: 93px;
   }
+  .nav__link {
+    font-size: 14px;
+  }
   .contacts {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 30px;
+  }
+  .contacts__link {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */
