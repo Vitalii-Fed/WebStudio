@@ -1,0 +1,41 @@
+.section {
+    padding: 60px 0;
+
+    &-team {
+        background-color: $color-bg-secondary;
+    }
+
+    &-footer {
+        color: $color-bg-footer;
+    }
+
+    &-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $color-text-title;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section {
+        padding: 94px 0;
+
+        &-feauters {
+            padding-bottom: 0;
+        }
+
+        &-footer {
+            padding: 60px 0;
+        }
+
+        &-title {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.17;
+        }
+    }
+}

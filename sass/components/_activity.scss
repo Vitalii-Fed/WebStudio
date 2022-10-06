@@ -1,0 +1,39 @@
+.section-activity {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .section-activity {
+        display: block;
+    }
+
+    .activity {
+        &__list {
+            display: flex;
+            gap: 30px;
+        }
+    
+        &__item {
+            position: relative;
+    
+            width: calc(33.333% - 20px);
+        }
+
+        &__sub-title {
+            position: absolute;
+            width: 100%;
+            height: 70px;
+            bottom: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 700;
+            line-height: 1.14;
+            text-transform: uppercase;
+            color: $color-text-secondary;
+            background-color: rgba(47, 48, 58, 0.8);
+        }
+    }
+}
