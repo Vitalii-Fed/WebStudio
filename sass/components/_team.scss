@@ -1,0 +1,81 @@
+.team {
+    &__list {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        width: 450px;
+        background-color: $color-bg-primary;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 1px rgba(0, 0, 0, 0.14),
+        0 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+.team-meta {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .team {
+        width: 760px;
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: calc(50% - 15px);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team {
+        width: 1200px;
+        &__item {
+            width: calc(25% - 22.5px);
+        }
+    }
+
+    .team-meta {
+        padding-bottom: 30px;
+
+        &__title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.19;
+            color: $color-text-title;
+        }
+
+        &__description {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.19;
+        }
+    }
+
+    .socials {
+        margin-top: 16px;
+
+        &__link {
+            color: #afb1b8;
+            @include customTransition(color, background-color);
+
+            &:hover,
+            &:focus {
+                color: $color-text-secondary;
+                background-color: $color-site-accent;
+            }
+        }
+    }
+}
