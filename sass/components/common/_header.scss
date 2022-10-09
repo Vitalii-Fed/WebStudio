@@ -52,6 +52,7 @@
         }
 
         &__link {
+            position: relative;
             display: block;
             padding-top: 32px;
             padding-bottom: 31px;
@@ -67,8 +68,19 @@
                 color: $color-site-accent;
             }
 
+            &:hover::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                left: 0;
+                bottom: -1px;
+                background-color: $color-site-accent;
+                border-radius: 2px;
+            }
+
             &--current {
-                position: relative;
                 color: $color-site-accent;
 
                 &::after {
@@ -97,7 +109,7 @@
         margin-left: auto;
 
         &__link {
-              display: flex;
+            display: flex;
             align-items: center;
           
             font-weight: 500;
