@@ -1,0 +1,137 @@
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 15px;
+    margin-bottom: 50px;
+}
+
+.projects {
+    &__item {
+        width: 100%;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        @include customTransition(box-shadow);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+            0 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+
+        &:hover .projects__overlay,
+        &:focus .projects__overlay {
+            transform: translateY(0);
+        }
+    }
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 77px 24px;
+        font-size: 18px;
+        line-height: 1.56;
+        color: $color-text-secondary;
+        background-color: rgba(33, 150, 243, 0.9);
+
+        transform: translateY(101%);
+        @include customTransition(transform);
+    }
+
+    &__card {
+        flex-grow: 1;
+        padding: 20px 23px 19px 23px;
+        border-right: 1px solid #eeeeee;
+        border-left: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $color-text-title;
+    }
+
+    &__description {
+        margin-top: 4px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.88;
+        color: $color-text-main;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .projects-wrapper {
+        max-width: 450px;
+    }
+
+    .filter {
+        max-width: 326px;
+    }
+
+    .projects {
+        &__item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .filter {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        &__item {
+            display: flex;
+            width: 354px;
+        }
+
+        &__overlay {
+            padding-top: 49px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .projects-wrapper {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filter {
+        margin-bottom: 50px;
+    }
+
+    .projects {
+        &__item {
+            width: 370px;
+        }
+
+        &__overlay {
+            padding-top: 63px;
+            padding-bottom: 63px;
+        }
+    }
+}
