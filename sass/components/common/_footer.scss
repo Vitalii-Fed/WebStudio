@@ -2,11 +2,35 @@
     text-align: center;
 }
 
+.footer-logo {
+    color: $color-site-light;
+}
+
 .footer-address {
+    font-style: normal;
     margin-top: 20px;
 
     &__item:not(:last-child) {
         margin-top: 8px;
+    }
+
+    &__link {
+        line-height: 1.71;
+        @include customTransition(color);
+
+        &:hover,
+        &:focus {
+            color: $color-site-accent;
+        }
+
+        &-location {
+            color: $color-text-secondary;
+        }
+
+        &-mail,
+        &-tel {
+            color: $color-text-contacts;
+        }
     }
 }
 
@@ -41,6 +65,14 @@
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &-icon {
+            margin-left: 10px;
+            fill: currentColor;
+        }
     }
 }
 
@@ -59,6 +91,94 @@
         &:hover,
         &:focus {
             background-color: $color-site-accent;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .footer-address {
+        width: 232px;
+    }
+
+    .join {
+        margin-top: 0;
+        margin-left: 165px;
+    }
+
+    .form-subscribe__input {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .footer-wrapper {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        text-align: start;
+    }
+
+    .footer-wrapper {
+        justify-content: start;
+    }
+
+    .footer-address {
+        width: 231px;
+
+        &__item:not(:first-child) {
+            margin-top: 9px;
+        }
+    }
+
+    .join {
+        margin-left: 70px;
+    }
+
+    .form-subscribe {
+        margin-top: 0;
+        margin-left: auto;
+
+        &__field {
+            display: flex;
+            align-items: center;
+        }
+
+        &__input {
+            width: 358px;
+        }
+
+        &__btn {
+            margin-top: 0;
+            margin-left: 12px;
+        }
+    }
+
+    .socials {
+        &__list {
+            width: 206px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__link {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: $color-text-secondary;
+            @include customTransition(background-color);
+
+            &:hover,
+            &:focus {
+                background-color: $color-site-accent;
+            }
         }
     }
 }

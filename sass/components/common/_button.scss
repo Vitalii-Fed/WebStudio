@@ -19,12 +19,12 @@
 
     &:hover,
     &:focus {
-        background-color: #188ce8;
+        background-color: #a2c0da;
     }
 }
 
 .hero__btn,
-.form__btn,
+.form-subscribe__btn,
 .modal-form__btn-submit {
     @extend %btn;
     @extend %btn-site-theme;
@@ -39,7 +39,7 @@
     }
 }
 
-.form__btn {
+.form-subscribe__btn {
     display: flex;
     justify-content: center;
     align-items: center;
