@@ -478,11 +478,10 @@ a {
 .mobile-menu-btn-close {
   width: 40px;
   height: 40px;
-  color: #000;
   background-color: #fff;
 }
-.mobile-menu-btn-close:hover, .mobile-menu-btn-closefocus {
-  fill: #2196f3;
+.mobile-menu-btn-close:hover, .mobile-menu-btn-close:focus {
+  color: #2196f3;
 }
 .mobile-menu-btn-close-icon {
   fill: currentColor;
@@ -1197,7 +1196,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 .mobile-menu-wrapper .mobile-menu {
@@ -1236,24 +1235,36 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-top: 64px;
+  max-width: 768px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.mobile-menu-wrapper .social-contacts__link {
-  font-size: 18px;
-  line-height: 1.22;
-  color: #2196f3;
+.mobile-menu-wrapper .social-contacts__item:not(:last-child) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-right: 20px;
 }
 .mobile-menu-wrapper .social-contacts__item:not(:last-child)::after {
   content: "";
-  margin: 0 10px;
+  position: absolute;
   width: 2px;
-  height: 22px;
+  max-height: 22px;
+  margin: 0 10px;
   background-color: rgba(33, 33, 33, 0.2);
+  right: -20px;
 }
 @media screen and (max-width: 480px) {
   .mobile-menu-wrapper .social-contacts__item:not(:last-child)::after {
     margin: 0 2vw;
     height: 4.6vh;
   }
+}
+.mobile-menu-wrapper .social-contacts__link {
+  font-size: 18px;
+  line-height: 1.22;
+  color: #2196f3;
 }
 
 @media screen and (max-width: 480px) {
@@ -1266,7 +1277,4 @@ a {
   .social-contacts__link {
     font-size: 3.75vh;
   }
-}
-.contacts-menu-mobile {
-  display: block;
 }/*# sourceMappingURL=main.css.map */

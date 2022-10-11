@@ -107,12 +107,11 @@
     width: 40px;
     height: 40px;
 
-    color: $color-site-dark;
     background-color: $color-bg-primary;
 
     &:hover,
-    &focus {
-        fill: $color-site-accent;
+    &:focus {
+        color: $color-site-accent;
     }
 
     &-icon {
