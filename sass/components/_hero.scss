@@ -15,14 +15,17 @@
 }
 
 .hero {
-    padding-top: calc(40vh - 80px);
-    padding-bottom: calc(40vh - 80px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .section-hero {
     width: 100%;
     max-width: 1600px;
     height: calc(100vh - 60px);
+    position: relative;
 
     text-align: center;
     margin-left: auto;

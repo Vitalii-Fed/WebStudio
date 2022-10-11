@@ -258,14 +258,19 @@ a {
 }
 
 .hero {
-  padding-top: calc(40vh - 80px);
-  padding-bottom: calc(40vh - 80px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .section-hero {
   width: 100%;
   max-width: 1600px;
   height: calc(100vh - 60px);
+  position: relative;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -348,7 +353,7 @@ a {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero-section/hero-bg-1600-600@3x.jpg);
   }
 }
-.mobile-menu-btn-close, .modal__btn-close, .filter__btn, .hero__btn,
+.mobile-menu-close, .modal__btn-close, .filter__btn, .hero__btn,
 .form-subscribe__btn,
 .modal-form__btn-submit {
   padding: 0;
@@ -475,15 +480,15 @@ a {
   fill: currentColor;
 }
 
-.mobile-menu-btn-close {
+.mobile-menu-close {
   width: 40px;
   height: 40px;
   background-color: #fff;
 }
-.mobile-menu-btn-close:hover, .mobile-menu-btn-close:focus {
+.mobile-menu-close:hover, .mobile-menu-close:focus {
   color: #2196f3;
 }
-.mobile-menu-btn-close-icon {
+.mobile-menu-close-icon {
   fill: currentColor;
 }
 

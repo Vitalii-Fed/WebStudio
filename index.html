@@ -738,9 +738,10 @@
             </div>
         </footer>
 
+        <!-- * МОБIЛЬНЕ МЕНЮ -->
         <div class="mobile-menu-container" id="mobileMenuContainer">
-            <button class="mobile-menu-btn-close" type="button" id="mobileMenuCloseBtn">
-                <svg class="mobile-menu-btn-close-icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+            <button class="mobile-menu-close" type="button" id="mobileMenuCloseBtn">
+                <svg class="mobile-menu-close-icon" aria-label="Перемикач мобільного меню" width="40" height="40">
                     <use href="./images/icons.svg#icon-close_40px"></use>
                 </svg>
             </button>
@@ -793,6 +794,19 @@
                 </ul>
             </div>
         </div>
+
+        <!-- * МОДАЛЬНЕ ВIКНО -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button data-modal-close type="button" class="modal__btn-close button">
+                    <svg>
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- * ПIДКЛЮЧЕННЯ JS -->
         <script
         defer
         src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
