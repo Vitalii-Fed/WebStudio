@@ -25,7 +25,7 @@
 
 .hero__btn,
 .form-subscribe__btn,
-.modal-form__btn-submit {
+.modal-form__btn-send {
     @extend %btn;
     @extend %btn-site-theme;
 
@@ -95,7 +95,7 @@
         color: $color-site-accent;
     }
 
-    &--icon {
+    &-icon {
         fill: currentColor;
     }
 }
